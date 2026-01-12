@@ -6,8 +6,6 @@ from dotenv import load_dotenv
 load_dotenv()
 API_KEY = os.getenv("OPENAI_API_KEY")
 
-print(API_KEY)
-
 # 1. OpenAIクライアント初期化（APIキーは環境変数）
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -129,4 +127,5 @@ with open(output_path, "w", encoding="utf-8") as f:
     f.write(result_text)
 
 print(f"レポート生成完了: {output_path}")
+
 
